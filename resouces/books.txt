@@ -1,0 +1,50 @@
+Effective Java;Joshua Bloch;Programming
+Clean Code;Robert C. Martin;Programming
+The Hobbit;J.R.R. Tolkien;Fantasy
+Harry Potter and the Philosopher's Stone;J.K. Rowling;Fantasy
+To Kill a Mockingbird;Harper Lee;Fiction
+1984;George Orwell;Dystopian
+The Catcher in the Rye;J.D. Salinger;Fiction
+Pride and Prejudice;Jane Austen;Romance
+The Great Gatsby;F. Scott Fitzgerald;Fiction
+Moby Dick;Herman Melville;Adventure
+War and Peace;Leo Tolstoy;Historical
+Anna Karenina;Leo Tolstoy;Romance
+Crime and Punishment;Fyodor Dostoevsky;Psychological
+The Odyssey;Homer;Epic
+Madame Bovary;Gustave Flaubert;Fiction
+The Brothers Karamazov;Fyodor Dostoevsky;Psychological
+Ulysses;James Joyce;Modernist
+The Divine Comedy;Dante Alighieri;Epic
+Brave New World;Aldous Huxley;Dystopian
+Wuthering Heights;Emily Bronte;Romance
+Great Expectations;Charles Dickens;Fiction
+The Iliad;Homer;Epic
+Les Misérables;Victor Hugo;Historical
+Don Quixote;Miguel de Cervantes;Adventure
+The Count of Monte Cristo;Alexandre Dumas;Adventure
+Dracula;Bram Stoker;Horror
+Frankenstein;Mary Shelley;Horror
+The Picture of Dorian Gray;Oscar Wilde;Gothic
+Fahrenheit 451;Ray Bradbury;Dystopian
+The Road;Cormac McCarthy;Dystopian
+Beloved;Toni Morrison;Fiction
+One Hundred Years of Solitude;Gabriel Garcia Marquez;Magical Realism
+Catch-22;Joseph Heller;Satire
+The Sound and the Fury;William Faulkner;Modernist
+Lolita;Vladimir Nabokov;Fiction
+On the Road;Jack Kerouac;Beat
+Heart of Darkness;Joseph Conrad;Adventure
+A Tale of Two Cities;Charles Dickens;Historical
+Slaughterhouse-Five;Kurt Vonnegut;Satire
+Gone with the Wind;Margaret Mitchell;Historical
+The Grapes of Wrath;John Steinbeck;Fiction
+Of Mice and Men;John Steinbeck;Fiction
+The Old Man and the Sea;Ernest Hemingway;Adventure
+A Farewell to Arms;Ernest Hemingway;War
+The Stranger;Albert Camus;Existential
+The Trial;Franz Kafka;Existential
+The Castle;Franz Kafka;Existential
+Thus Spoke Zarathustra;Friedrich Nietzsche;Philosophy
+The Art of War;Sun Tzu;Philosophy
+The Prince;Niccolò Machiavelli;Philosophy
