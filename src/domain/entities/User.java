@@ -8,7 +8,7 @@ public class User {
     private String id;
     private String name;
     private List<Loan> loanHistory = new ArrayList<>();
-    private double totalFines = 0.0;
+    private double totalFines = 0;
 
     public User(String id, String name) {
         this.id = id;
@@ -17,6 +17,20 @@ public class User {
 
     public void addLoan(Loan loan) {
         loanHistory.add(loan);
+
+        if (loan.isOverdue()){
+            addFine(loan.getFine());
+        }
+    }
+
+    public void addFine(double amount){
+        if (amount > 0){
+            totalFines += amount;
+        }
+    }
+
+    public double getTotalFines() {
+        return totalFines;
     }
 
     public String getId() { return id; }

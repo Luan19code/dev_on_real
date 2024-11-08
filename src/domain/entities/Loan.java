@@ -23,8 +23,13 @@ public class Loan {
         this.user = user;
         this.loanDate = loanDate;
         this.isReturned = false;
-        this.fine = 0.0;
+        this.fine = 0;
         loanCount++;
+    }
+
+    public boolean isOverdue(){
+        return !isReturned && loanDate.plusDays(14).isBefore(LocalDate.now());
+
     }
 
     public void returnBook(LocalDate returnDate) {
@@ -34,9 +39,12 @@ public class Loan {
     }
 
     private void calculateFine() {
-        long daysBetween = java.time.temporal.ChronoUnit.DAYS.between(loanDate, returnDate);
-        fine = daysBetween * DAILY_FINE;
+        if (returnDate != null && loanDate != null){
+            long daysBetween = java.time.temporal.ChronoUnit.DAYS.between(loanDate, returnDate);
+            fine = (daysBetween * DAILY_FINE);
+        }
     }
+
 
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }
