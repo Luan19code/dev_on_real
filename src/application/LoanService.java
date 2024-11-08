@@ -16,11 +16,22 @@ public class LoanService {
         this.loanRepository = loanRepository;
     }
 
-    public void loanBook(Book book, User user) {
-        String loanId = UUID.randomUUID().toString();
-        Loan loan = new Loan(loanId, book, user, LocalDate.now());
-        loanRepository.addLoan(loan);
-        user.addLoan(loan);
+    public void loanBook(Book book, User user) throws Exception {
+        List<Loan>  LoansByThisUser = loanRepository.getLoansByUserId(user.getId());
+        double totalFine = 0;
+
+        for (Loan loan : LoansByThisUser) {
+            totalFine += loan.getFine();
+        }
+
+        if (totalFine != 0) {
+            String loanId = UUID.randomUUID().toString();
+            Loan loan = new Loan(loanId, book, user, LocalDate.now());
+            loanRepository.addLoan(loan);
+            user.addLoan(loan);
+        } else {
+            throw new Exception("this User have fines to pay");
+        }
     }
 
     public void returnBook(String loanId) {

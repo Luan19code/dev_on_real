@@ -72,8 +72,12 @@ public class LoanController {
             return;
         }
 
-        loanService.loanBook(book, user);
-        System.out.println("Book loaned successfully.");
+        try {
+            loanService.loanBook(book, user);
+            System.out.println("Book loaned successfully.");
+        } catch (Exception e) {
+            System.out.printf("\nSomething wrong: %s", e.getMessage());
+        }
     }
 
     private void returnBook() {
