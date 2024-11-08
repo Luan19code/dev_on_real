@@ -13,7 +13,22 @@ public class DataLoader {
         BufferedReader reader = new BufferedReader(new FileReader(filePath));
         String line;
         while ((line = reader.readLine()) != null) {
+            if (line.trim().isEmpty()) continue;
             String[] parts = line.split(";");
+            if (parts.length < 2){
+                System.err.println(line);
+                continue;
+            }
+            if(parts[0].isEmpty() || parts[1].isEmpty()) {
+                System.err.println("Dados incompletos: " + line);
+                continue;
+            }
+
+            if (users.containsKey(parts[0])){
+                System.err.println("ID Duplicado: " + parts[0]);
+                continue;
+            }
+
             users.put(parts[0], new User(parts[0], parts[1]));
         }
         return users;
