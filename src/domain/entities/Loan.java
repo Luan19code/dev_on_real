@@ -28,14 +28,24 @@ public class Loan {
     }
 
     public void returnBook(LocalDate returnDate) {
-        this.returnDate = returnDate;
-        this.isReturned = true;
-        calculateFine();
+        if (!isReturned){
+            this.returnDate = returnDate;
+            this.isReturned = true;
+            calculateFine();
+            System.out.println("Book returned successfully.");
+        } else {
+            System.out.println("Já foi devolido");
+        }
     }
 
     private void calculateFine() {
-        long daysBetween = java.time.temporal.ChronoUnit.DAYS.between(loanDate, returnDate);
-        fine = daysBetween * DAILY_FINE;
+        long daysBetween = java.time.temporal.ChronoUnit.DAYS.between(loanDate, returnDate) - 14;
+
+        fine = 0;
+
+        if (daysBetween > 0) {
+            fine = daysBetween * DAILY_FINE;
+        }
     }
 
     public String getId() { return id; }

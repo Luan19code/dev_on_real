@@ -80,7 +80,6 @@ public class LoanController {
         System.out.print("Enter Loan ID: ");
         String loanId = scanner.nextLine();
         loanService.returnBook(loanId);
-        System.out.println("Book returned successfully.");
     }
 
     private void viewLoanHistory() {
