@@ -35,7 +35,9 @@ public class Loan {
 
     private void calculateFine() {
         long daysBetween = java.time.temporal.ChronoUnit.DAYS.between(loanDate, returnDate);
-        fine = daysBetween * DAILY_FINE;
+        if (daysBetween > 14) {
+            fine = DAILY_FINE * (daysBetween - 14);
+        }
     }
 
     public String getId() { return id; }
